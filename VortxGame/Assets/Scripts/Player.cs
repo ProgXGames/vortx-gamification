@@ -85,6 +85,7 @@ public class Player : MonoBehaviour
     {
       anim.SetBool("hit", true);
       Invoke("KillPlayer", 0.4f);
+      GameController.instance.ShowGameOver();
     }
   }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameController : MonoBehaviour
@@ -8,6 +9,8 @@ public class GameController : MonoBehaviour
   [Header("--- UI Elements ---")]
   [SerializeField] TextMeshProUGUI totalScoreTxt;
   [SerializeField] GameObject mainMenu;
+  [SerializeField] GameObject gameOver;
+  [SerializeField] GameObject advLevel;
 
   [Header("--- Player Total Score ---")]
   public int totalScore;
@@ -33,5 +36,25 @@ public class GameController : MonoBehaviour
   public void UpdateScoreText()
   {
     totalScoreTxt.text = totalScore.ToString();
+  }
+
+  public void ShowGameOver()
+  {
+    gameOver.SetActive(true);
+  }
+
+  public void ShowAdvanceLevel()
+  {
+    advLevel.SetActive(true);
+  }
+
+  public void RestartLevel(string level)
+  {
+    SceneManager.LoadScene(level);
+  }
+
+  public void AdvanceLevel(string level)
+  {
+    SceneManager.LoadScene(level);
   }
 }
