@@ -12536,10 +12536,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1868968752}
     m_Modifications:
+    - target: {fileID: 180808654014515460, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}
+      propertyPath: m_text
+      value: Repetir Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 677793908799948253, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -104
+      objectReference: {fileID: 0}
     - target: {fileID: 960225044315216047, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 841747298}
+    - target: {fileID: 960225044315216047, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Lvl3
+      objectReference: {fileID: 0}
     - target: {fileID: 960225045145946931, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12627,6 +12639,10 @@ PrefabInstance:
     - target: {fileID: 960225045145946932, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}
       propertyPath: m_Name
       value: FinishLevelPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 960225045145946932, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7df51f46e9511147a2ef022fe961b52, type: 3}

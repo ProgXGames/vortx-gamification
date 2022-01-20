@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
       anim.SetBool("jump", false);
     }
 
-    if(collision.gameObject.tag == "Spike")
+    if(collision.gameObject.tag == "Spike" || collision.gameObject.tag == "Saw" || collision.gameObject.tag == "RockHead")
     {
       anim.SetBool("hit", true);
       Invoke("KillPlayer", 0.4f);
@@ -92,6 +92,11 @@ public class Player : MonoBehaviour
   void OnCollisionExit2D(Collision2D collision)
   {
     isJumping = true;
+
+    if(collision.gameObject.tag == "Fire")
+    {
+      isJumping = false;
+    }
   }
 
   void KillPlayer()
