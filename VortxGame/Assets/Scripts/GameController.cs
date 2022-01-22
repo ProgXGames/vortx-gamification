@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
   [SerializeField] GameObject mainMenu;
   [SerializeField] GameObject gameOver;
   [SerializeField] GameObject advLevel;
+  [SerializeField] GameObject scoreObj;
+  [SerializeField] GameObject interactivePanel;
 
   [Header("--- Player Total Score ---")]
   public int totalScore;
@@ -26,11 +28,18 @@ public class GameController : MonoBehaviour
   void Start()
   {
     instance = this;
+    FindObjectOfType<StopWatch>().StartTimer();
+
+    if(SceneManager.GetActiveScene().name == "Home")
+    {
+      scoreObj.SetActive(false);
+    }
   }
 
   public void StartGame()
   {
     mainMenu.SetActive(false);
+    interactivePanel.SetActive(true);
     Instantiate(player);
   }
 
@@ -51,6 +60,7 @@ public class GameController : MonoBehaviour
 
   public void ShowAdvanceLevel()
   {
+    FindObjectOfType<StopWatch>().StopTimer();
     advLevel.SetActive(true);
   }
 
