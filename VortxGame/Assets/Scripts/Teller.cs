@@ -17,6 +17,10 @@ public class Teller : MonoBehaviour
   public Button chatPanelNextButton;
 
   [Space(20)]
+  [Tooltip("Teller voice")]
+  [SerializeField] AudioSource voice;
+
+  [Space(20)]
   [Tooltip("Text display speed on the screen")]
   [Range(0.05f, 0.10f)]
   public float dialogSpeed;
@@ -48,6 +52,7 @@ public class Teller : MonoBehaviour
 
   IEnumerator Dialog()
   {
+    voice.Play();
     textToDisplay.text = "";
     chatPanelNextButton.interactable = false;
 
