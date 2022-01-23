@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -10,6 +11,9 @@ public class GameController : MonoBehaviour
   [Header("--- UI Elements ---")]
   [SerializeField] TextMeshProUGUI totalScoreTxt;
   [SerializeField] GameObject mainMenu;
+  [SerializeField] Slider gameLvlSlider;
+  [SerializeField] TextMeshProUGUI gameLvlTxt;
+  [SerializeField] TMP_InputField nameField;
   [SerializeField] GameObject gameOver;
   [SerializeField] GameObject advLevel;
   [SerializeField] GameObject scoreObj;
@@ -71,6 +75,42 @@ public class GameController : MonoBehaviour
 
   public void AdvanceLevel(string level)
   {
+    if(World.phase == 1)
+    {
+      World.lupas += totalScore;
+    }
+    if (World.phase == 2)
+    {
+      World.lampada += totalScore;
+    }
+    else
+    {
+      World.ferramenta += totalScore;
+    }
+
     SceneManager.LoadScene(level);
+  }
+
+  public void UpdateGameLevel()
+  {
+    World.gamelvl = (int)gameLvlSlider.value;
+
+    if(World.gamelvl == 1)
+    {
+      gameLvlTxt.text = "Horizonte 1";
+    }
+    else if (World.gamelvl == 2)
+    {
+      gameLvlTxt.text = "Horizonte 2";
+    }
+    else
+    {
+      gameLvlTxt.text = "Horizonte 3";
+    }
+  }
+
+  public void UpdatePlayerName()
+  {
+    World.playerName = nameField.text;
   }
 }

@@ -58,7 +58,15 @@ public class Teller : MonoBehaviour
 
     foreach (char letter in sentences[index].ToCharArray())
     {
-      textToDisplay.text += letter;
+      if(letter == '@')
+      {
+        textToDisplay.text += World.playerName;
+      }
+      else
+      {
+        textToDisplay.text += letter;
+      }
+
       yield return new WaitForSeconds(dialogSpeed);
     }
 

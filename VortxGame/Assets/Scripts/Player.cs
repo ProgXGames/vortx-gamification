@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -14,11 +15,36 @@ public class Player : MonoBehaviour
   [Header("--- Player Animations ---")]
   private Animator anim;
 
+  [Header("--- Player Health ---")]
+  public bool hasHealth = false;
+  public int health = 10;
+  [SerializeField] Slider healthBar;
+
   // Start is called before the first frame update
   void Start()
   {
     rig = GetComponent<Rigidbody2D>();
     anim = GetComponent<Animator>();
+
+    if (hasHealth)
+    {
+      if(World.gamelvl == 1)
+      {
+        healthBar.maxValue = 10;
+        health = 10;
+      }
+      if (World.gamelvl == 2)
+      {
+        healthBar.maxValue = 7;
+        health = 7;
+      }
+      else
+      {
+        healthBar.maxValue = 5;
+        health = 5;
+      }
+      healthBar.value = health;
+    }
   }
 
   // Update is called once per frame
@@ -26,6 +52,17 @@ public class Player : MonoBehaviour
   {
     Move();
     Jump();
+
+    if (hasHealth)
+    {
+      healthBar.value = health;
+
+      if(health <= 0)
+      {
+        Invoke("KillPlayer", 0.4f);
+        GameController.instance.ShowGameOver();
+      }
+    }
   }
 
   void Move()
@@ -81,11 +118,52 @@ public class Player : MonoBehaviour
       anim.SetBool("jump", false);
     }
 
-    if(collision.gameObject.tag == "Spike" || collision.gameObject.tag == "Saw" || collision.gameObject.tag == "RockHead")
+    if(collision.gameObject.tag == "Spike")
     {
       anim.SetBool("hit", true);
-      Invoke("KillPlayer", 0.4f);
-      GameController.instance.ShowGameOver();
+      PlayerDamage(10);
+
+      if(health <= 0)
+      {
+        Invoke("KillPlayer", 0.4f);
+        GameController.instance.ShowGameOver();
+      }
+      else
+      {
+        Invoke("TurnOffHitAnimation", 0.4f);
+      }
+    }
+
+    if(collision.gameObject.tag == "Saw")
+    {
+      anim.SetBool("hit", true);
+      PlayerDamage(6);
+
+      if (health <= 0)
+      {
+        Invoke("KillPlayer", 0.4f);
+        GameController.instance.ShowGameOver();
+      }
+      else
+      {
+        Invoke("TurnOffHitAnimation", 0.4f);
+      }
+    }
+
+    if(collision.gameObject.tag == "RockHead")
+    {
+      anim.SetBool("hit", true);
+      PlayerDamage(8);
+
+      if (health <= 0)
+      {
+        Invoke("KillPlayer", 0.4f);
+        GameController.instance.ShowGameOver();
+      }
+      else
+      {
+        Invoke("TurnOffHitAnimation", 0.4f);
+      }
     }
   }
 
@@ -102,5 +180,15 @@ public class Player : MonoBehaviour
   void KillPlayer()
   {
     Destroy(gameObject);
+  }
+
+  void TurnOffHitAnimation()
+  {
+    anim.SetBool("hit", false);
+  }
+
+  public void PlayerDamage(int damage)
+  {
+    health -= damage;
   }
 }
