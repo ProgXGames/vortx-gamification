@@ -8,7 +8,7 @@ public class Teller : MonoBehaviour
 {
   [Header("--- Teller Id ---")]
   [Tooltip("Teller main identifier, can not be equal to another one")]
-  [Range(1,4)]
+  [Range(1,8)]
   public int id;
 
   [Header("--- Chat objects ---")]
@@ -36,7 +36,10 @@ public class Teller : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-
+    if(id > 4)
+    {
+      StartDialogue();
+    }
   }
 
   // Update is called once per frame
@@ -87,6 +90,11 @@ public class Teller : MonoBehaviour
       return;
     }
 
+    StartCoroutine(Dialog());
+  }
+
+  void StartDialogue()
+  {
     StartCoroutine(Dialog());
   }
 }

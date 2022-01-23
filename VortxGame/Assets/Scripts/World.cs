@@ -6,9 +6,11 @@ public class World : MonoBehaviour
 {
   [Header("--- Player Info ---")]
   public static string playerName;
+  public static string playerProduct;
 
   [Header("--- Game Stats ---")]
   public static int phase;
+  public static int level;
   public static int gamelvl;
 
   [Header("--- Phase Items ---")]
@@ -18,6 +20,7 @@ public class World : MonoBehaviour
 
   static World()
   {
+    level = 1;
     phase = 1;
     gamelvl = 1;
   }
