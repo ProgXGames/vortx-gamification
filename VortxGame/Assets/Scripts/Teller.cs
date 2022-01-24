@@ -45,7 +45,7 @@ public class Teller : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.E) && !showingDialog)
+    if (Input.GetKeyDown(KeyCode.E) && !showingDialog && !FindObjectOfType<GameController>().GetIsMainMenuOpen())
     {
       chatPanel.SetActive(true);
       showingDialog = true;

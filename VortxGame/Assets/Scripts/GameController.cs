@@ -10,10 +10,14 @@ public class GameController : MonoBehaviour
 {
   [Header("--- UI Elements ---")]
   [SerializeField] TextMeshProUGUI totalScoreTxt;
+  [SerializeField] GameObject titlePanel;
   [SerializeField] GameObject mainMenu;
+  [SerializeField] GameObject mainMenuPanel2;
+  [SerializeField] GameObject credits;
   [SerializeField] Slider gameLvlSlider;
   [SerializeField] TextMeshProUGUI gameLvlTxt;
   [SerializeField] TMP_InputField nameField;
+  [SerializeField] TMP_InputField productField;
   [SerializeField] GameObject gameOver;
   [SerializeField] GameObject advLevel;
   [SerializeField] GameObject scoreObj;
@@ -28,6 +32,8 @@ public class GameController : MonoBehaviour
   public Transform playerRespawnPoint;
   public GameObject player;
 
+  public bool isMainMenuOpen = false;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -37,14 +43,45 @@ public class GameController : MonoBehaviour
     if(SceneManager.GetActiveScene().name == "Home")
     {
       scoreObj.SetActive(false);
+      if(World.phase == 1)
+      {
+        isMainMenuOpen = true;
+      }
+      else
+      {
+        isMainMenuOpen = false;
+        mainMenu.SetActive(false);
+        titlePanel.SetActive(false);
+      }
     }
+  }
+
+  public void OpenMainMenuSecondPanel()
+  {
+    mainMenu.SetActive(false);
+    mainMenuPanel2.SetActive(true);
   }
 
   public void StartGame()
   {
+    titlePanel.SetActive(false);
     mainMenu.SetActive(false);
+    mainMenuPanel2.SetActive(false);
     interactivePanel.SetActive(true);
+    isMainMenuOpen = false;
     Instantiate(player);
+  }
+
+  public void OpenCredits()
+  {
+    credits.SetActive(true);
+    mainMenu.SetActive(false);
+  }
+
+  public void CloseCredits()
+  {
+    credits.SetActive(false);
+    mainMenu.SetActive(true);
   }
 
   public void ExitGame()
@@ -97,20 +134,30 @@ public class GameController : MonoBehaviour
 
     if(World.gamelvl == 1)
     {
-      gameLvlTxt.text = "Horizonte 1";
+      gameLvlTxt.text = "Horizonte 1 - Aperfeiçoamento operacional, mercados que geram renda atualmente";
     }
     else if (World.gamelvl == 2)
     {
-      gameLvlTxt.text = "Horizonte 2";
+      gameLvlTxt.text = "Horizonte 2 - Expansão adjacente, mercados conhecidos";
     }
     else
     {
-      gameLvlTxt.text = "Horizonte 3";
+      gameLvlTxt.text = "Horizonte 3 - Inovação, mercados desconhecidos";
     }
   }
 
   public void UpdatePlayerName()
   {
     World.playerName = nameField.text;
+  }
+
+  public void UpdateProductName()
+  {
+    World.playerProduct = productField.text;
+  }
+
+  public bool GetIsMainMenuOpen()
+  {
+    return isMainMenuOpen;
   }
 }
