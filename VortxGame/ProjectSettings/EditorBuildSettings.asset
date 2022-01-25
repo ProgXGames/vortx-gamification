@@ -9,16 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Lvl2.unity
+    path: Assets/Scenes/Phases/Dev/Dev - Lvl2.unity
     guid: 90c93bceb9ace8240b92422a655ad5ee
   - enabled: 1
-    path: Assets/Scenes/Lvl1.unity
+    path: Assets/Scenes/Phases/Dev/Dev - Lvl1.unity
     guid: d4958131c1beeef48accacc9bc2cbf68
   - enabled: 1
-    path: Assets/Scenes/Lvl3.unity
+    path: Assets/Scenes/Phases/Dev/Dev - Lvl3.unity
     guid: 1eea92f44e7a8d04190fad1d84a76523
   - enabled: 1
-    path: Assets/Scenes/Lvl4.unity
+    path: Assets/Scenes/Phases/Dev/Dev - Lvl4.unity
     guid: 5aa19a72c4edb4e4892aa5b0f1015715
   - enabled: 1
     path: Assets/Scenes/Phases/Dev/Kanban.unity
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phases/Dev/TranDev.unity
     guid: 5e6285f845452d24ba2dbd4d73aa8d1b
+  - enabled: 1
+    path: Assets/Scenes/Teste.unity
+    guid: 87d0b343fc7ddd44f9cad79e52094edd
+  - enabled: 1
+    path: Assets/Scenes/Phases/Prototype/TranProt.unity
+    guid: 44ebca8fa5f95514386bb8974cce4e3d
   m_configObjects: {}

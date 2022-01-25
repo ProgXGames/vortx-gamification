@@ -21,7 +21,7 @@ public class LevelController : MonoBehaviour
   {
     if(collision.gameObject.tag == "Player")
     {
-      SceneManager.LoadScene("Lvl1");
+      SceneManager.LoadScene("TranDev");
     }
   }
 }

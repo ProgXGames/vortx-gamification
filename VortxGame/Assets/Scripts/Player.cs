@@ -20,11 +20,16 @@ public class Player : MonoBehaviour
   public int health = 10;
   [SerializeField] Slider healthBar;
 
+  [Header("--- Sounds ---")]
+  private AudioSource hitSound;
+
   // Start is called before the first frame update
   void Start()
   {
     rig = GetComponent<Rigidbody2D>();
     anim = GetComponent<Animator>();
+    
+    hitSound = gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>();
 
     if (hasHealth)
     {
@@ -121,6 +126,7 @@ public class Player : MonoBehaviour
     if(collision.gameObject.tag == "Spike")
     {
       anim.SetBool("hit", true);
+      hitSound.Play();
       PlayerDamage(10);
 
       if(health <= 0)
@@ -137,6 +143,7 @@ public class Player : MonoBehaviour
     if(collision.gameObject.tag == "Saw")
     {
       anim.SetBool("hit", true);
+      hitSound.Play();
       PlayerDamage(6);
 
       if (health <= 0)
@@ -153,6 +160,7 @@ public class Player : MonoBehaviour
     if(collision.gameObject.tag == "RockHead")
     {
       anim.SetBool("hit", true);
+      hitSound.Play();
       PlayerDamage(8);
 
       if (health <= 0)

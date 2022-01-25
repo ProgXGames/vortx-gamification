@@ -34,13 +34,18 @@ public class GameController : MonoBehaviour
 
   public bool isMainMenuOpen = false;
 
+  [Header("--- Sounds ---")]
+  [SerializeField] AudioSource winSound;
+  [SerializeField] AudioSource looseSound;
+  private bool playedSound = false;
+
   // Start is called before the first frame update
   void Start()
   {
     instance = this;
     FindObjectOfType<StopWatch>().StartTimer();
 
-    if(SceneManager.GetActiveScene().name == "Home")
+    if (SceneManager.GetActiveScene().name == "Home")
     {
       scoreObj.SetActive(false);
       if(World.phase == 1)
@@ -97,12 +102,22 @@ public class GameController : MonoBehaviour
   public void ShowGameOver()
   {
     gameOver.SetActive(true);
+    if (!playedSound)
+    {
+      playedSound = true;
+      looseSound.Play();
+    }
   }
 
   public void ShowAdvanceLevel()
   {
     FindObjectOfType<StopWatch>().StopTimer();
     advLevel.SetActive(true);
+    if (!playedSound)
+    {
+      playedSound = true;
+      winSound.Play();
+    }
   }
 
   public void RestartLevel(string level)

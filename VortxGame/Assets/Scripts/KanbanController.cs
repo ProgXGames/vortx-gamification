@@ -42,6 +42,7 @@ public class KanbanController : MonoBehaviour
     {
       kanbanSlider.value = 3.49f;
       valueAux = 3.49f;
+      World.level = 0;
     }
 
     StartCoroutine(Advance());
@@ -63,5 +64,30 @@ public class KanbanController : MonoBehaviour
 
       yield return new WaitForSeconds(0.02f);
     } while (contador <= valueAux);
+
+    StartCoroutine(AdvanceForTheNextLevel());
+  }
+
+  IEnumerator AdvanceForTheNextLevel()
+  {
+    if(World.level == 2)
+    {
+      NextLevel("Dev - Lvl2");
+    }
+    else if (World.level == 3)
+    {
+      NextLevel("Dev - Lvl3");
+    }
+    else
+    {
+      NextLevel("Dev - Lvl4");
+    }
+
+    yield return new WaitForSeconds(2f);
+  }
+
+  void NextLevel(string name)
+  {
+    FindObjectOfType<SceneLoader>().LoadSceneByName(name);
   }
 }

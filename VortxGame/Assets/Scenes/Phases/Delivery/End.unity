@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 4150134}
   - component: {fileID: 4150133}
   m_Layer: 0
-  m_Name: Judge (2)
+  m_Name: JudgeDev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ea8ad8ec9a237941862516354a00396, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -199,8 +199,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4150132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.29, y: 1.41, z: 10.88296}
-  m_LocalScale: {x: 7.8114, y: 7.8114, z: 7.8114}
+  m_LocalPosition: {x: -1.224, y: 1.41, z: 10.88296}
+  m_LocalScale: {x: 6.172539, y: 6.172539, z: 6.172539}
   m_Children: []
   m_Father: {fileID: 1787630888}
   m_RootOrder: 2
@@ -1389,7 +1389,7 @@ GameObject:
   - component: {fileID: 817237040}
   - component: {fileID: 817237039}
   m_Layer: 0
-  m_Name: Judge (1)
+  m_Name: JudgeProt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,7 +1435,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c34f758209e0ee46a4acd4dcc458844, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1454,8 +1454,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817237038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.87, y: 1.41, z: 10.88296}
-  m_LocalScale: {x: 7.8114, y: 7.8114, z: 7.8114}
+  m_LocalPosition: {x: -4.869, y: 1.41, z: 10.88296}
+  m_LocalScale: {x: 6.172539, y: 6.172539, z: 6.172539}
   m_Children: []
   m_Father: {fileID: 1787630888}
   m_RootOrder: 1
@@ -1704,7 +1704,7 @@ GameObject:
   - component: {fileID: 1308118521}
   - component: {fileID: 1308118520}
   m_Layer: 0
-  m_Name: Judge
+  m_Name: JudgeDisc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1750,7 +1750,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8dd789540bae09469cee6284e7b82c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1769,8 +1769,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308118519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.07, y: 1.41, z: 10.88296}
-  m_LocalScale: {x: 7.8114, y: 7.8114, z: 7.8114}
+  m_LocalPosition: {x: -3.015, y: 1.41, z: 10.88296}
+  m_LocalScale: {x: 6.172539, y: 6.172539, z: 6.172539}
   m_Children: []
   m_Father: {fileID: 1787630888}
   m_RootOrder: 0
