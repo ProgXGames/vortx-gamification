@@ -2,15 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class KanbanController : MonoBehaviour
 {
+  [Header("--- Slider ---")]
   [SerializeField] Slider kanbanSlider;
+
+  [Header("--- Card Elements ---")]
+  [SerializeField] TextMeshProUGUI playerProduct;
+  [SerializeField] TextMeshProUGUI playerName;
 
   float valueAux = 1f;
 
   void Start()
   {
+    playerName.text = World.playerName;
+    playerProduct.text = World.playerProduct;
+
     if(World.level == 1)
     {
       kanbanSlider.value = 1f;

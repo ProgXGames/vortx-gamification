@@ -23,5 +23,20 @@ public class World : MonoBehaviour
     level = 1;
     phase = 1;
     gamelvl = 1;
+
+    lupas = 0;
+    lampada = 0;
+    ferramenta = 0;
+  }
+
+  public static void ResetGame()
+  {
+    level = 1;
+    phase = 1;
+    gamelvl = 1;
+
+    lupas = 0;
+    lampada = 0;
+    ferramenta = 0;
   }
 }
