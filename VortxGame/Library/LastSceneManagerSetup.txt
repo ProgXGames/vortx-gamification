@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Phases/Delivery/End.unity
+- path: Assets/Scenes/Discov-Lvl1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
