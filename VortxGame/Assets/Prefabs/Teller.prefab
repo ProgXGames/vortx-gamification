@@ -131,12 +131,12 @@ MonoBehaviour:
   voice: {fileID: 0}
   dialogSpeed: 0.08
   sentences:
-  - "Ol\xE1, @  Bem vindo \xE0 equipe de produto. Voc\xEA est\xE1 na primeira etapa,
+  - "Ol\xE1, @!  Bem vindo \xE0 equipe de produto. Voc\xEA est\xE1 na primeira etapa,
     o processo de Discovery."
   - "Na fase de Discovery voc\xEA vai entender as necessidades, descobrir dores,
-    realizar pesquisas e estar pr\xF3ximo ao usu\xE1rio."
+    realizar pesquisas e estar pr\xF3ximo ao usu\xE1rio.\r\n"
   - "E assim, voc\xEA vai idealizar uma solu\xE7\xE3o que fa\xE7a sentido para o
-    neg\xF3cio e para o usu\xE1rio!"
+    neg\xF3cio e para o usu\xE1rio!\r\n"
   - "Realize o processo de Discovery mais completo poss\xEDvel coletando o m\xE1ximo
     de lupas!"
 --- !u!95 &2783313627439166648
