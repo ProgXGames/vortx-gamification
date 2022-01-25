@@ -10,6 +10,7 @@ public class Teller : MonoBehaviour
   [Tooltip("Teller main identifier, can not be equal to another one")]
   [Range(1,8)]
   public int id;
+  public int animationType;
 
   [Header("--- Chat objects ---")]
   [SerializeField] GameObject chatPanel;
@@ -33,12 +34,29 @@ public class Teller : MonoBehaviour
 
   private bool showingDialog = false;
 
+  private Animator anim;
+
   // Start is called before the first frame update
   void Start()
   {
+    anim = GetComponent<Animator>();
+
     if(id > 4)
     {
       StartDialogue();
+    }
+
+    if(animationType == 1)
+    {
+      anim.SetInteger("type", 1);
+    }
+    else if (animationType == 2)
+    {
+      anim.SetInteger("type", 2);
+    }
+    else
+    {
+
     }
   }
 

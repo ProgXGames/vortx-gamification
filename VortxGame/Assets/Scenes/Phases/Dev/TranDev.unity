@@ -365,6 +365,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1262173290}
     - target: {fileID: 3194427753077967736, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}
+      propertyPath: animationType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3194427753077967736, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}
       propertyPath: textToDisplay
       value: 
       objectReference: {fileID: 890648447}
@@ -384,7 +388,7 @@ PrefabInstance:
     - target: {fileID: 3194427753077967736, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}
       propertyPath: sentences.Array.data[1]
       value: "Com o Discovery e o Prot\xF3tipo prontos, agora voc\xEA precisa levar
-        a ideia para o time desenvolvimento entender qual a viabilidade do projeto"
+        a ideia para o time desenvolvimento entender qual a viabilidade do projeto."
       objectReference: {fileID: 0}
     - target: {fileID: 3194427753077967736, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}
       propertyPath: sentences.Array.data[2]
@@ -399,7 +403,8 @@ PrefabInstance:
     - target: {fileID: 3194427753077967736, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}
       propertyPath: sentences.Array.data[4]
       value: "Colete o m\xE1ximo de ferramentas para ajudar o time de Desenvolvimento
-        com o seu produto!"
+        com o seu produto! Qualquer d\xFAvida estou a disposi\xE7\xE3o, me chamo
+        Julia."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}

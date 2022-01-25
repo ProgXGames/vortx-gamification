@@ -67,11 +67,12 @@
     <Compile Include="Assets\Scripts\RockHead.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\SpikeBall.cs" />
+    <Compile Include="Assets\Scripts\Lampada.cs" />
     <Compile Include="Assets\Scripts\NextLevelPoint.cs" />
     <Compile Include="Assets\Scripts\StopWatch.cs" />
     <Compile Include="Assets\Scripts\Apple.cs" />
     <Compile Include="Assets\Scripts\World.cs" />
-    <Compile Include="Assets\Scripts\Lampada.cs" />
+    <Compile Include="Assets\Scripts\Tool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

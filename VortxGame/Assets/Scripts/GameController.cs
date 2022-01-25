@@ -74,7 +74,7 @@ public class GameController : MonoBehaviour
     mainMenuPanel2.SetActive(false);
     interactivePanel.SetActive(true);
     isMainMenuOpen = false;
-    Instantiate(player);
+    //Instantiate(player);
   }
 
   public void OpenCredits()

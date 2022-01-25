@@ -365,6 +365,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1262173290}
     - target: {fileID: 3194427753077967736, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}
+      propertyPath: animationType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3194427753077967736, guid: 7531b7eb7cf5c8543b04f67ce7d4b312, type: 3}
       propertyPath: textToDisplay
       value: 
       objectReference: {fileID: 890648447}
@@ -492,7 +496,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: End
+          m_StringArgument: Prot - Lvl1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &658711422

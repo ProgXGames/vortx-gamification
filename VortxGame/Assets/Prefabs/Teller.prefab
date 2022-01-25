@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3194427753077967620}
   - component: {fileID: 3194427753077967623}
   - component: {fileID: 3194427753077967736}
+  - component: {fileID: 2783313627439166648}
   m_Layer: 0
   m_Name: Teller
   m_TagString: Untagged
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  animationType: 0
   chatPanel: {fileID: 0}
   textToDisplay: {fileID: 0}
   chatPanelNextButton: {fileID: 0}
@@ -137,3 +139,22 @@ MonoBehaviour:
     neg\xF3cio e para o usu\xE1rio!"
   - "Realize o processo de Discovery mais completo poss\xEDvel coletando o m\xE1ximo
     de lupas!"
+--- !u!95 &2783313627439166648
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194427753077967619}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b75bbd1eafeb4944db321ef89dc46d6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
