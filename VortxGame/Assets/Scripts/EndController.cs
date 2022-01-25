@@ -121,7 +121,6 @@ public class EndController : MonoBehaviour
 
   public void EndGame()
   {
-    World.ResetGame();
-    FindObjectOfType<SceneLoader>().LoadSceneByName("Home");
+    Application.Quit();
   }
 }
